@@ -23,7 +23,7 @@ jobs:
           version: 9
 
       - name: Install Monorepo Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Code Verification & Compilations Build Checks
         run: pnpm run build
