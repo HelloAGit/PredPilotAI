@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# Build artifacts
+dist
+**/dist
+.next
+**/.next
+
+# Turbo cache
+.turbo
+
+# Rust / Anchor build artifacts
+**/target
+programs/settlement/target
+
+# Environment files (never include secrets in images)
+.env
+**/.env
+.env.local
+**/.env.local
+
+# Version control
+.git
+.gitignore
+
+# Editor / OS
+.DS_Store
+*.swp
+.vscode
+
+# Test outputs
+coverage
+**/coverage
+
+# Secrets — must be mounted at runtime via volumes
+secrets
+**/secrets

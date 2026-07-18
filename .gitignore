@@ -1,0 +1,57 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# TypeScript build output
+dist
+**/dist
+
+# Next.js build output
+.next
+**/.next
+
+# Turbo cache
+.turbo
+**/.turbo
+
+# Rust / Anchor build artifacts
+target
+**/target
+
+# Anchor generated files (checked in after build)
+programs/settlement/target
+
+# Environment files
+.env
+**/.env
+.env.local
+**/.env.local
+.env.*.local
+**/.env.*.local
+
+# Secrets — never commit keypairs or tokens
+secrets
+**/secrets
+*.json.secret
+
+# Compiled JavaScript from TypeScript source (only in src dirs)
+packages/shared/src/*.js
+packages/shared/src/*.d.ts
+packages/shared/src/*.js.map
+
+# pnpm lock file (committed for reproducible installs)
+# pnpm-lock.yaml — intentionally tracked
+
+# Editor / OS
+.DS_Store
+*.swp
+.vscode
+.idea
+
+# Next.js generated type file
+next-env.d.ts
+**/next-env.d.ts
+
+# Test / coverage output
+coverage
+**/coverage

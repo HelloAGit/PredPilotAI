@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import EventSource from 'eventsource';
 import axios from 'axios';
-import { getNetworkConfig } from '@txline-monorepo/shared/dist/config';
+import { getNetworkConfig } from '@txline-monorepo/shared';
 import { settleOnChainMarket } from './solana-settler';
 
 dotenv.config();

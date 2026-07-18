@@ -1,6 +1,6 @@
 import { Connection, Keypair, PublicKey, Transaction, Ed25519Program } from '@solana/web3.js';
 import { Program, AnchorProvider, Wallet, Idl } from '@coral-xyz/anchor';
-import { getNetworkConfig } from '@txline-monorepo/shared/dist/config';
+import { getNetworkConfig } from '@txline-monorepo/shared';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -47,7 +47,7 @@ export async function settleOnChainMarket(
     .accountsStrict({
       market: marketPda,
       globalState: PublicKey.findProgramAddressSync([Buffer.from('state')], settlementProgram.programId)[0],
-      ixSysvar: PublicKey.from('Sysvar1nstructions1111111111111111111111111'),
+      ixSysvar: new PublicKey('Sysvar1nstructions1111111111111111111111111'),
     })
     .instruction();
 
