@@ -5,6 +5,8 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
+# Replace with your actual deployed program ID before deploying to devnet/mainnet.
+# Run `anchor build` and use the generated ID from `target/deploy/settlement-keypair.json`.
 settlement = "CgM71v9T7NqNExC6Wf9v5J8pXQk2LqZ8S6M67W888888"
 
 [registry]
