@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  stream-worker:
+    build:
+      context: .
+      dockerfile: ./services/stream-worker/Dockerfile
+    environment:
+      - NETWORK=devnet
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - ORACLE_AUTHORITY_KEYPAIR=/secrets/oracle.json
+    volumes:
+      - ./secrets:/secrets
+    restart: always
+
+  web-dashboard:
+    build:
+      context: .
+      dockerfile: ./apps/web/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_NETWORK=devnet
