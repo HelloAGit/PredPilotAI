@@ -15,3 +15,15 @@ A high-performance monorepo utilizing **TxLINE by TxODDS** streams to fuel immed
 2. Initialize and lock packages:
    ```bash
    pnpm install
+   ```
+3. Build the monorepo:
+   ```bash
+   pnpm run build
+   ```
+
+## 📋 Requirements
+- Node.js 22+
+- pnpm 9+
+
+## 🚀 Getting Started
+Refer to individual workspace directories for specific setup instructions.
