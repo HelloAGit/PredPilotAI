@@ -1,6 +1,7 @@
 {
   "name": "txline-prediction-monorepo",
   "private": true,
+  "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=9.0.0"
