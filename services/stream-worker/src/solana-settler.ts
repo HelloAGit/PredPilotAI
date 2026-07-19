@@ -47,7 +47,7 @@ export async function settleOnChainMarket(
     .accountsStrict({
       market: marketPda,
       globalState: PublicKey.findProgramAddressSync([Buffer.from('state')], settlementProgram.programId)[0],
-      ixSysvar: PublicKey.from('Sysvar1nstructions1111111111111111111111111'),
+      ixSysvar: new PublicKey('Sysvar1nstructions1111111111111111111111111'),
     })
     .instruction();
 
